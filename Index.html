@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Only Strength - Bazla 🌸</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root { --maroon: #580018; --gold: #d4af37; --cream: #fffaf0; --pink: #ff4d6d; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--cream); color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+
+        /* --- Floating Stars Background --- */
+        .star { position: fixed; color: var(--gold); font-size: 14px; animation: flash 3s infinite ease-in-out; z-index: -1; }
+        @keyframes flash { 0%, 100% { opacity: 0.3; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.2); } }
+
+        /* --- Page 1: Entrance --- */
+        #entrance { 
+            height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            background: linear-gradient(rgba(44, 0, 12, 0.9), rgba(88, 0, 24, 0.95)); 
+            text-align: center; padding: 20px; color: white;
+        }
+        .eid-moon { font-size: 60px; margin-bottom: 10px; animation: float 3s infinite ease-in-out; }
+        #entrance h1 { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold); letter-spacing: 1px; }
+        #entrance p { font-size: 1.1rem; opacity: 0.9; max-width: 320px; line-height: 1.6; }
+        
+        #giftBtn { 
+            background: var(--gold); color: var(--maroon); border: none; padding: 16px 45px; 
+            border-radius: 50px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 25px;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4); animation: pulse 1.5s infinite;
+        }
+
+        /* --- Main Content Layout --- */
+        #mainContent { display: none; padding-bottom: 60px; }
+        
+        .box-card { 
+            background: white; padding: 40px 25px; border-radius: 30px; 
+            margin: 30px auto; max-width: 550px; width: 90%;
+            border: 1px solid rgba(212, 175, 55, 0.25); 
+            box-shadow: 0 15px 35px rgba(88, 0, 24, 0.04); text-align: center;
+        }
+        .box-card h3 { font-family: 'Great Vibes', cursive; font-size: 2.6rem; color: var(--maroon); margin-top: 0; }
+        .letter-p { font-size: 1.1rem; line-height: 1.9; color: #444; text-align: justify; margin-bottom: 20px; }
+
+        /* --- Beautiful Poll Styling --- */
+        .poll-title { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--maroon); margin: 0 0 5px 0; }
+        .poll-container { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+        .poll-option { 
+            background: #fff; border: 2px solid #eee; padding: 14px 18px; 
+            border-radius: 20px; font-size: 1.05rem; font-weight: 600; cursor: pointer; 
+            transition: 0.3s ease; display: flex; align-items: center; justify-content: space-between;
+        }
+        .poll-option:hover { border-color: var(--pink); background: #fff0f3; }
+        .poll-option.selected { background: var(--maroon); color: white; border-color: var(--maroon); }
+        .special-option { border: 2px dashed var(--gold); background: #fffdf5; color: var(--maroon); }
+        .special-option:hover { background: #fdf5d6; border-color: var(--gold); }
+
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+    <audio id="eidMusic" loop preload="auto">
+        <source src="s2.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="entrance">
+        <div class="eid-moon">🥺🌸</div>
+        <h1>Bazla, Ek Minute Suno...</h1>
+        <p>Subah gusse mein jo kuch kaha, woh bilkul ghalat tha. Ek baar apne Arslan ki baat sun lo bacha...</p>
+        <button id="giftBtn">Open My Heart 🎁</button>
+    </section>
+
+    <div id="mainContent">
+        
+        <div class="box-card" style="border-top: 5px solid var(--maroon);">
+            <h3>Mere Dil Ka Khat... 📝</h3>
+            <p class="letter-p">
+                <strong>Bazla Meri Jaan,</strong><br>
+                Subah gusse mein maine hosh kho diye thay aur jo harsh words bol diye ke "tum kabhi badal nahi sakti", woh mere dil ke jazbaat bilkul nahi thay. Main bohot sharminda hoon apni us bakwas par. Sach toh yeh hai ke tumne mere liye jo kuch kiya hai, woh koi aur kar hi nahi sakta. Tumne har qadam par mera sath diya hai.
+            </p>
+            <p class="letter-p">
+                Main gusse mein andha ho gaya tha, lekin mera sukoon tumse hi shuru hota hai aur tum par hi khatam hota hai. Aaj Eid ka itna haseen din hai, please apne Arslan ka kanpakad ke sorry qubool kar lo aur hamari khushi ko is narazgi ki nazar mat hone do. Tum meri taqat ho, tumhare bina sab kuch adhoora hai.
+            </p>
+        </div>
+
+        <div class="box-card" style="background: #fff0f3; border: 1px solid var(--pink);">
+            <h4 class="poll-title">🎁 Choice No. 1: Mood Thanda Treat</h4>
+            <p style="font-size: 0.95rem; color: #666; margin: 0;">Inme se aapko is waqt kya chahiye? 😉</p>
+            <div class="poll-container">
+                <div class="poll-option" onclick="wrongPoll(this)">Kurkure 🌶️</div>
+                <div class="poll-option" onclick="wrongPoll(this)">Cheetos 🧀</div>
+                <div class="poll-option" onclick="wrongPoll(this)">KFC 🍗</div>
+                <div class="poll-option special-option" onclick="correctPoll(this, 'deal')">KFC + Cheetos + Arslan ka hug 🤗❤️</div>
+            </div>
+            <p id="msg-deal" style="display:none; color: var(--maroon); font-weight: bold; margin-top: 15px;"></p>
+        </div>
+
+        <div class="box-card">
+            <h4 class="poll-title">⏱️ Choice No. 2: Gussa Kab Khatam Hoga?</h4>
+            <p style="font-size: 0.95rem; color: #666; margin: 0;">Arslan ko maafi kab mil rahi hai?</p>
+            <div class="poll-container">
+                <div class="poll-option" onclick="wrongPoll(this)">Agli Eid Par 🙄</div>
+                <div class="poll-option" onclick="wrongPoll(this)">Baad Mein Sochoongi 🤨</div>
+                <div class="poll-option special-option" onclick="correctPoll(this, 'mood')">Abhi Isi Waqt, Kyun Ke Eid Hai! 🥰✨</div>
+            </div>
+            <p id="msg-mood" style="display:none; color: var(--maroon); font-weight: bold; margin-top: 15px;"></p>
+        </div>
+
+        <div class="box-card" style="background: #fffdf5;">
+            <h4 class="poll-title">🚗 Choice No. 3: Maafi Ke Baad Ka Plan?</h4>
+            <p style="font-size: 0.95rem; color: #666; margin: 0;">Chalo gussa thanda ho gaya, ab kahan chalna hai?</p>
+            <div class="poll-container">
+                <div class="poll-option" onclick="wrongPoll(this)">Ghar Par Hi Rehna Hai 🏠</div>
+                <div class="poll-option" onclick="wrongPoll(this)">Sona Hai Bas 😴</div>
+                <div class="poll-option special-option" onclick="correctPoll(this, 'plan')">Arslan Ke Sath Long Drive Aur Dinner Pe! 🥩🍟</div>
+            </div>
+            <p id="msg-plan" style="display:none; color: var(--maroon); font-weight: bold; margin-top: 15px;"></p>
+        </div>
+
+        <div class="box-card" style="background: var(--maroon); color: white; border: none;">
+            <h2 style="font-family: 'Great Vibes'; color: var(--gold); font-size: 3.2rem; margin: 0;">Eid Mubarak, My Everything 🌸</h2>
+            <p style="line-height: 1.9; font-size: 1.15rem; opacity: 0.95; padding: 15px 0;">
+                Eid mubarak bazla arslan apke sath zindgi asaan hogayi apke bad tamam chizen theek hogayi bal sanwar gaye sakoon mil geya jo preshanian thi woh khatam hogayin ujry mosam bahar me badal gaye andheru raatien roshan hogayin...<br><br>
+                Shukriya mere pass meri zindgi me anee ke leye or sath dene ke leye eid mubarak! <br><br>
+                <strong>And yes you are only mine and my strenght too 🌸💍</strong>
+            </p>
+            <p style="font-family: 'Great Vibes'; font-size: 2.2rem; color: var(--gold); margin: 10px 0 0 0;">
+                Hamesha Sirf Tumhara, Arslan
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        // Star background effects
+        for (let i = 0; i < 25; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.innerHTML = '★';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(star);
+        }
+
+        const giftBtn = document.getElementById('giftBtn');
+        const entrance = document.getElementById('entrance');
+        const mainContent = document.getElementById('mainContent');
+        const music = document.getElementById('eidMusic');
+
+        // Play audio and unlock main content on click
+        giftBtn.addEventListener('click', () => {
+            entrance.style.display = 'none';
+            mainContent.style.display = 'block';
+            
+            music.muted = false;
+            var playPromise = music.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    console.log("Audio playing");
+                }).catch(err => {
+                    document.body.addEventListener('touchstart', () => { music.play(); }, {once: true});
+                });
+            }
+        });
+
+        // Smart locked buttons alert
+        function wrongPoll(element) {
+            alert("Nooo! Ghalat option... Yeh wala block hai bacha! Sahi wala aur special option neeche hai, use tap karo! 😜❤️");
+        }
+
+        // Correct selection triggers confetti burst and romantic responses
+        function correctPoll(element, type) {
+            // Remove previous selections in this local card block
+            const parent = element.parentElement;
+            parent.querySelectorAll('.poll-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+
+            const msg = document.getElementById('msg-' + type);
+            msg.style.display = 'block';
+
+            if(type === 'deal') {
+                msg.innerHTML = "Awww! 😍 Done Ho Gaya! KFC, Cheetos aur dhero dher Pyar milenge abhi! 🤗🔥";
+            } else if(type === 'mood') {
+                msg.innerHTML = "Yayyy! I knew it! Eid Mubarak My Chand, Thank you maaf karne ke liye! 😘💋";
+            } else if(type === 'plan') {
+                msg.innerHTML = "Perfect! 🥰 Tayyar ho jao, aaj ka din poora aapke naam hai!";
+            }
+
+            // Burst celebration confetti sparks
+            confetti({ particleCount: 120, spread: 60, origin: { y: 0.7 } });
+        }
+    </script>
+</body>
+</html>
